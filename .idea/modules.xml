@@ -12,6 +12,8 @@
       <module fileurl="file://$PROJECT_DIR$/operators/operators.iml" filepath="$PROJECT_DIR$/operators/operators.iml" />
       <module fileurl="file://$PROJECT_DIR$/orientadoObjetos/orientadoObjetos.iml" filepath="$PROJECT_DIR$/orientadoObjetos/orientadoObjetos.iml" />
       <module fileurl="file://$PROJECT_DIR$/paquetes/paquetes.iml" filepath="$PROJECT_DIR$/paquetes/paquetes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poo_herencia/poo_herencia.iml" filepath="$PROJECT_DIR$/poo_herencia/poo_herencia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poo_sobrecargar/poo_sobrecargar.iml" filepath="$PROJECT_DIR$/poo_sobrecargar/poo_sobrecargar.iml" />
       <module fileurl="file://$PROJECT_DIR$/propiedades_sistema/propiedades_sistema.iml" filepath="$PROJECT_DIR$/propiedades_sistema/propiedades_sistema.iml" />
       <module fileurl="file://$PROJECT_DIR$/valores_references/valores_references.iml" filepath="$PROJECT_DIR$/valores_references/valores_references.iml" />
       <module fileurl="file://$PROJECT_DIR$/wrapper/wrapper.iml" filepath="$PROJECT_DIR$/wrapper/wrapper.iml" />
