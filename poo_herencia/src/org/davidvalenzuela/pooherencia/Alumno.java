@@ -6,6 +6,32 @@ public class Alumno extends Persona {
     private double notaMatematica;
     private double notaCastellano;
 
+    private double notaNotaHistory;
+
+    public Alumno(){
+        System.out.println("Alumno: Inicializando Constructor...");
+    }
+
+    public Alumno(String name,  String nameSecond){
+        super(name, nameSecond);
+    }
+
+    public Alumno(String name, String secondName, int age){
+        super(name, secondName, age);
+    }
+
+    public Alumno(String name, String secondName, int age, String institucion){
+        super(name, secondName, age);
+        this.institucion = institucion;
+    }
+
+    public Alumno(String name, String secondName, int age, String institucion, double notaMatematica, double notaCastellano, double notaNotaHistory){
+        this(name, secondName, age, institucion);
+        this.notaMatematica =  notaMatematica;
+        this.notaCastellano =  notaCastellano;
+        this.notaNotaHistory = notaNotaHistory;
+    }
+
     public String getInstitucion() {
         return institucion;
     }
@@ -28,5 +54,19 @@ public class Alumno extends Persona {
 
     public void setNotaCastellano(double notaCastellano) {
         this.notaCastellano = notaCastellano;
+    }
+
+    public double getNotaNotaHistory() {
+        return notaNotaHistory;
+    }
+
+    public void setNotaNotaHistory(double notaNotaHistory) {
+        this.notaNotaHistory = notaNotaHistory;
+    }
+
+    @Override
+    public String saludar(){
+        String saludar = super.saludar();
+        return saludar + " soy un alumno y mi nombre es " + getName();
     }
 }

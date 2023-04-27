@@ -1,11 +1,28 @@
 package org.davidvalenzuela.pooherencia;
 
+import javax.sound.midi.Soundbank;
+import java.sql.SQLOutput;
+
 public class Persona {
 
     private String name;
     private  String secondName;
     private int age;
     private String email;
+
+    public Persona(){
+        System.out.println("Persona: Inicializando Constructor...");
+    }
+
+    public Persona(String name, String secondName){
+        this.name = name;
+        this.secondName = secondName;
+    }
+
+    public Persona(String name, String secondName, int age){
+        this(name, secondName);
+        this.age = age;
+    }
 
     public String getName() {
         return name;
@@ -37,5 +54,9 @@ public class Persona {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String saludar(){
+        return "Hola que tal!";
     }
 }
