@@ -69,4 +69,9 @@ public class Alumno extends Persona {
         String saludar = super.saludar();
         return saludar + " soy un alumno y mi nombre es " + getName();
     }
+
+    public double calculateAverage(){
+        System.out.println("calculate: " + this.getClass().getCanonicalName());
+        return (notaNotaHistory + notaCastellano + notaMatematica) / 3;
+    }
 }

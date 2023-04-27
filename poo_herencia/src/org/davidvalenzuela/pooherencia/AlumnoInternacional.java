@@ -37,4 +37,10 @@ public class AlumnoInternacional extends Alumno {
     public String saludar() {
         return "Hola soy un alumno extranjero del pais " +  getPais()  +  " mi nombre " +  getName();
     }
+
+    @Override
+    public double calculateAverage() {
+        System.out.println("calculate: " + this.getClass().getCanonicalName());
+        return ((super.calculateAverage()*3) + notaIdiomas) / 4;
+    }
 }
