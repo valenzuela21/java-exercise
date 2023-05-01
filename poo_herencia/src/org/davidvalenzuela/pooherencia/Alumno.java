@@ -71,7 +71,16 @@ public class Alumno extends Persona {
     }
 
     public double calculateAverage(){
-        System.out.println("calculate: " + this.getClass().getCanonicalName());
+        System.out.println("calculate: " + Alumno.class.getCanonicalName());
         return (notaNotaHistory + notaCastellano + notaMatematica) / 3;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n institucion='" + institucion + '\'' +
+                ", notaMatematica=" + notaMatematica +
+                ", notaCastellano=" + notaCastellano +
+                ", notaNotaHistory=" + notaNotaHistory +
+                ", promedio=" + this.calculateAverage();
     }
 }

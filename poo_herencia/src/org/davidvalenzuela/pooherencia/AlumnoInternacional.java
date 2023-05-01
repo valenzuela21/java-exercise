@@ -1,6 +1,6 @@
 package org.davidvalenzuela.pooherencia;
 
-public class AlumnoInternacional extends Alumno {
+public final class AlumnoInternacional extends Alumno {
     private String pais;
     private double notaIdiomas;
 
@@ -40,7 +40,14 @@ public class AlumnoInternacional extends Alumno {
 
     @Override
     public double calculateAverage() {
-        System.out.println("calculate: " + this.getClass().getCanonicalName());
+        System.out.println("calculate: " + AlumnoInternacional.class.getCanonicalName());
         return ((super.calculateAverage()*3) + notaIdiomas) / 4;
+    }
+
+
+    @Override
+    public String toString() {
+        return super.toString() + "\npais='" + pais + '\'' +
+                ", notaIdiomas=" + notaIdiomas ;
     }
 }
