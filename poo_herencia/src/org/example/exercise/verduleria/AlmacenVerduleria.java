@@ -15,7 +15,23 @@ public class AlmacenVerduleria {
         productos[7] =  new NoPerecible("Protos Hallado Bolsa", 2300, 34, 290);
 
         for(Producto prod: productos){
-            System.out.println("-----------------------------" +  prod.getClass().getSimpleName() + "------------------------------");
+            System.out.println("----------------------------- " +  prod.getClass().getSimpleName() + " ------------------------------");
+            System.out.println("Nombre: " + prod.getNombre());
+            System.out.println("Precio: " + prod.getPrecio());
+
+            if(prod instanceof  Fruta){
+                System.out.println("Peso (gr): " + ((Fruta) prod).getPeso());
+                System.out.println("Color: " + ((Fruta) prod).getColor());
+            } else if(prod instanceof  Limpieza) {
+                System.out.println("Componentes: " +  ((Limpieza) prod).getComponents());
+                System.out.println("Litros: " + ((Limpieza) prod).getLitros() );
+            } else if(prod instanceof  Lacteo){
+                System.out.println("Cantidad  (gr/cc): " + ((Lacteo) prod).getCantidad());
+                System.out.println("Proteinas (gr): " +  ((Lacteo) prod).getProteinas());
+            } else if (prod instanceof  NoPerecible) {
+                System.out.println("Calorias (kCal):" +  ((NoPerecible) prod).getCalorias());
+                System.out.println("Contenido neto (gr): " +  ((NoPerecible) prod).getContenido());
+            }
         }
 
 
