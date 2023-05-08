@@ -1,10 +1,6 @@
-import org.david.pooclassabstractas.form.elements.ElementForm;
-import org.david.pooclassabstractas.form.elements.InputForm;
-import org.david.pooclassabstractas.form.elements.SelectForm;
-import org.david.pooclassabstractas.form.elements.TextAreaForm;
+import org.david.pooclassabstractas.form.elements.*;
 import org.david.pooclassabstractas.form.elements.select.Options;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,7 +17,7 @@ public class EjemploFrom {
 
         SelectForm lenguaje = new SelectForm("lenguage");
         Options java  = new Options("1", "Java");
-        Options typescript = new Options("4", "TypeScript");
+        Options typescript = new Options("4", "TypeScript").setSelected(true);
         lenguaje.addOptions(java)
                 .addOptions(new Options("2","Python"))
                 .addOptions(new Options("3","Javascript"))
@@ -42,7 +38,7 @@ public class EjemploFrom {
         email.setValor("jhon.doe@correo.com");
         age.setValor("25");
         experience.setValor("... más 10m años experiencia");
-        typescript.setSelected(true);
+        //typescript.setSelected(true);
 
         List<ElementForm> elements = Arrays.asList(userName, password, email, age, experience, lenguaje, saludar);
 
