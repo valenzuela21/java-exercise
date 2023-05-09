@@ -1,7 +1,7 @@
 package org.david.pooclassabstractas.form.elements.validator;
 
 public class NumberValidate extends Validator {
-     protected String message =  "El unput debe ser un número";
+     protected String message =  "El campo  %s  debe ser un número";
 
 
     @Override
@@ -14,7 +14,7 @@ public class NumberValidate extends Validator {
     }
 
     @Override
-    public boolean esValid(String value) {
+    public boolean isValid(String value) {
         try{
             Integer.parseInt(value);
             return true;
