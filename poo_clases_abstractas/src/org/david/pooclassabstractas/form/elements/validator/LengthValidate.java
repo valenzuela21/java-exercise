@@ -1,7 +1,9 @@
 package org.david.pooclassabstractas.form.elements.validator;
 
-public class LengthValidate extends Validator {
-    protected  String message = "El campo debe tener minimo %d caracteres y máximo de %d caracteres";
+import org.david.pooclassabstractas.form.elements.validator.message.IMessageFormat;
+
+public class LengthValidate extends Validator implements IMessageFormat {
+    protected  String message = "El campo %s debe tener minimo %d caracteres y máximo de %d caracteres";
     private int min;
     private  int max = Integer.MAX_VALUE;
 
@@ -41,11 +43,17 @@ public class LengthValidate extends Validator {
 
     @Override
     public boolean isValid(String value) {
-        this.message = String.format(this.message, this.min, this.max);
+        //this.message = String.format(this.message, this.min, this.max);
         if(value == null){
             return true;
         }
         int large = value.length();
         return large >= min && large <=  max;
     }
+
+    @Override
+    public String getMessageFormat(String input) {
+        return String.format(this.message, input, this.min, this.max);
+    }
+
 }

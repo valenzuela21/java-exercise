@@ -1,6 +1,8 @@
 package org.david.pooclassabstractas.form.elements;
 
+import org.david.pooclassabstractas.form.elements.validator.LengthValidate;
 import org.david.pooclassabstractas.form.elements.validator.Validator;
+import org.david.pooclassabstractas.form.elements.validator.message.IMessageFormat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +45,12 @@ abstract public class ElementForm {
     public boolean isValid(){
         for(Validator v: validators){
             if(!v.isValid(this.valor)){
-                this.errors.add( String.format(v.getMessage(), name));
+                if(v instanceof IMessageFormat){
+                    this.errors.add(((IMessageFormat) v).getMessageFormat(name));
+                }else{
+                    this.errors.add( String.format(v.getMessage(), name));
+                }
+
             }
         }
         return this.errors.isEmpty();
