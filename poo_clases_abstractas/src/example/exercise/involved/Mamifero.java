@@ -1,51 +1,53 @@
 package example.exercise.involved;
 
 abstract public class Mamifero {
-    protected  String habitat;
-    protected  float height;
-    protected  float largo;
-    protected  float peso;
 
-    protected String nameScience;
+    protected String habitat;
+    protected float altura;
+    protected float largo;
+    protected float peso;
+    protected String nombreCientifico;
 
-
-    public Mamifero(String habitat, float largo, float height,float peso, String nameScience){
-        this.habitat =  habitat;
-        this.height = height;
-        this.largo =  largo;
+    public Mamifero(String habitat, float altura, float largo, float peso, String nombreCientifico) {
+        this.habitat = habitat;
+        this.altura = altura;
+        this.largo = largo;
         this.peso = peso;
-                this.nameScience = nameScience;
+        this.nombreCientifico = nombreCientifico;
     }
 
-    public Mamifero(String habitat, float height, float largo, float peso) {
+    public Mamifero(String habitat, float altura, float largo, float peso) {
         this.habitat = habitat;
-        this.height = height;
+        this.altura = altura;
         this.largo = largo;
         this.peso = peso;
     }
 
-    public String getHabitat(){
+    public String getHabitat() {
         return habitat;
     }
 
-    public float getHeight() {
-        return height;
+    public Mamifero() {
+    }
+
+    public float getAltura() {
+        return altura;
     }
 
     public float getLargo() {
         return largo;
     }
 
+    public String getNombreCientifico() {
+        return nombreCientifico;
+    }
+
     public float getPeso() {
         return peso;
     }
 
-    public String getNameScience() {
-        return nameScience;
-    }
-
-    abstract  public String eat();
-    abstract  public String sleep();
-    abstract public  String runner();
-    abstract public String communicate();
+    abstract public String comer();
+    abstract public String dormir();
+    abstract public String correr();
+    abstract public String comunicarse();
 }

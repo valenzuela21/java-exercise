@@ -1,21 +1,21 @@
 package example.exercise.involved;
 
-abstract public class Felino extends Mamifero {
+abstract public class Felino extends Mamifero{
 
-    protected  float sizeFangs;
-    protected  int velocity;
+    protected float tamanoGarras;
+    protected int velocidad;
 
-    public Felino(String habitat, float largo, float height, float peso, String nameScience, float sizeFangs, int velocity) {
-        super(habitat, largo, height, peso, nameScience);
-        this.sizeFangs = sizeFangs;
-        this.velocity = velocity;
+    public Felino(float tamanoGarras, int velocidad, String habitat, float altura, float largo, float peso) {
+        super(habitat, altura, largo, peso);
+        this.tamanoGarras = tamanoGarras;
+        this.velocidad = velocidad;
     }
 
-    public float getSizeFangs() {
-        return sizeFangs;
+    public float getTamanoGarras() {
+        return tamanoGarras;
     }
 
-    public int getVelocity() {
-        return velocity;
+    public int getVelocidad() {
+        return velocidad;
     }
 }

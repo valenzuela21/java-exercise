@@ -3,40 +3,41 @@ package example.exercise;
 import example.exercise.involved.Felino;
 
 public class Leon extends Felino {
-    private int numManada;
-    private double powerRoarDecibel;
 
-    public Leon(String habitat, float largo, float height, float peso, String nameScience, float sizeFangs, int velocity, int numManada, double powerRoarDecibel) {
-        super(habitat, largo, height, peso, nameScience, sizeFangs, velocity);
+    private int numManada;
+    private double potenciaRugidoDecibel;
+
+    public Leon(double potenciaRugidoDecibel, int numManada, float tamanoGarras, int velocidad, String habitat, float altura, float largo, float peso) {
+        super(tamanoGarras, velocidad, habitat, altura, largo, peso);
         this.numManada = numManada;
-        this.powerRoarDecibel = powerRoarDecibel;
+        this.potenciaRugidoDecibel = potenciaRugidoDecibel;
     }
 
     public int getNumManada() {
         return numManada;
     }
 
-    public double getPowerRoarDecibel() {
-        return powerRoarDecibel;
+    public double getPotenciaRugidoDecibel() {
+        return potenciaRugidoDecibel;
     }
 
     @Override
-    public String eat() {
-        return "El Leon casa junto a su grupo de "+ numManada +" individuales en als llanuras africanas";
+    public String comer() {
+        return "El Leon caza junto a su grupo de " + numManada + " individuos en las llanuras africanas";
     }
 
     @Override
-    public String sleep() {
+    public String dormir() {
         return "El Leon duerme en las estepas africanas";
     }
 
     @Override
-    public String runner() {
-        return "El leon corre a "+ velocity +" km/hr";
+    public String correr() {
+        return "El Leon corre a " + velocidad + " km/hr";
     }
 
     @Override
-    public String communicate() {
-        return "El elon ruge fuerte a " + powerRoarDecibel + "deciceles";
+    public String comunicarse() {
+        return "El Leon ruge fuerte a " + potenciaRugidoDecibel + " decibeles";
     }
 }

@@ -1,38 +1,37 @@
 package example.exercise;
 
+
 import example.exercise.involved.Felino;
 
 public class Tigre extends Felino {
+    private String especieTigre;
 
-
-    private String specieTigre;
-
-    public Tigre(String habitat, float largo, float height, float peso, String nameScience, float sizeFangs, int velocity, String specieTigre) {
-        super(habitat, largo, height, peso, nameScience, sizeFangs, velocity);
-        this.specieTigre = specieTigre;
+    public Tigre(String especieTigre, float tamanoGarras, int velocidad, String habitat, float altura, float largo, float peso) {
+        super(tamanoGarras, velocidad, habitat, altura, largo, peso);
+        this.especieTigre = especieTigre;
     }
 
-    public String getSpecieTigre() {
-        return specieTigre;
-    }
-
-    @Override
-    public String eat() {
-        return "El Tigre " + specieTigre + " caza solitario en los manglares y bosqies monzónicos de " +  habitat;
+    public String getEspecieTigre() {
+        return especieTigre;
     }
 
     @Override
-    public String sleep() {
-        return "El Tigre  " + specieTigre + " duerme en la selva de " +  habitat;
+    public String comer() {
+        return "El Tigre " + especieTigre + " caza solitario en los manglares y bosques monzónicos de " + habitat;
     }
 
     @Override
-    public String runner() {
-        return "El tigre " + specieTigre + "corre a " +  velocity + ".km/hr";
+    public String dormir() {
+        return "El Tigre " + especieTigre + " duerme en la selvas de " + habitat;
     }
 
     @Override
-    public String communicate() {
-        return "El Tigre ruge y agacha sus orejas";
+    public String correr() {
+        return "El Tigre " + especieTigre + " corre a " + velocidad + " km/hr";
+    }
+
+    @Override
+    public String comunicarse() {
+        return "El Ruge Tigre y agacha sus orejas";
     }
 }
