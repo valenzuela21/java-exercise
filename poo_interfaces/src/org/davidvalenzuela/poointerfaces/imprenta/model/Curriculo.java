@@ -21,6 +21,7 @@ public class Curriculo extends Hoja implements Imprimible{
         return this;
     }
 
+
     @Override
     public String imprimir() {
 

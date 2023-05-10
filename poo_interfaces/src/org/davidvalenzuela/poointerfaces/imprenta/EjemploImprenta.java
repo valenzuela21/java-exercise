@@ -25,13 +25,14 @@ public class EjemploImprenta {
 
 
         Informe informer =  new Informe(new Persona("Juan", "Volcan"), "Martin Followers", "Estudio sobre azure devops");
-        imprimir(cv);
-        imprimir(informer);
-        imprimir(book);
+        Imprimible.imprimir(cv);
+        Imprimible.imprimir(informer);
+        Imprimible.imprimir(book);
+
+
+        System.out.println(Imprimible.TEXT_DEFECTO);
 
     }
 
-    public static void imprimir(Imprimible imprimible){
-        System.out.println(imprimible.imprimir());
-    }
+
 }
