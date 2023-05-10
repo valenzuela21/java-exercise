@@ -1,6 +1,8 @@
 package org.exercise.poointerface;
 
-public class TvLcd extends  Electronico{
+import org.exercise.poointerface.parts.Electronico;
+
+public class TvLcd extends Electronico {
 
     private int pulgada;
 

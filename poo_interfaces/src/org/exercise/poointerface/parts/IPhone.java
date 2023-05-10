@@ -1,4 +1,6 @@
-package org.exercise.poointerface;
+package org.exercise.poointerface.parts;
+
+import org.exercise.poointerface.parts.Electronico;
 
 public class IPhone extends Electronico {
     private String modelo;

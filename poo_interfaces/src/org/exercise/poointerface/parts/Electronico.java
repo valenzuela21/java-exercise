@@ -1,5 +1,6 @@
-package org.exercise.poointerface;
+package org.exercise.poointerface.parts;
 
+import org.exercise.poointerface.Producto;
 import org.exercise.poointerface.interfaces.IElectronico;
 
 abstract public class Electronico extends Producto implements IElectronico {
