@@ -1,14 +1,11 @@
 package org.vlz.poointerfaces.repositorio;
-
-import org.vlz.poointerfaces.model.Client;
-
 import java.util.List;
 
-public interface CrudRepository {
+public interface CrudRepository<T> {
 
-    List<Client> listAll();
-    Client byId(Integer id);
-    void create(Client client);
-    void edit(Client client);
+    List<T> listAll();
+    T byId(Integer id);
+    void create(T object);
+    void edit(T object);
     void delete(Integer id);
 }

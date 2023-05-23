@@ -2,12 +2,13 @@ package org.vlz.poointerfaces;
 
 import org.vlz.poointerfaces.model.Client;
 import org.vlz.poointerfaces.repositorio.*;
+import org.vlz.poointerfaces.repositorio.list.ClientListRepository;
 
 import java.util.List;
 
 public class ExampleRepository {
     public static void main(String[] args) {
-        OrdeByPageCrudRepository repo =  new ClientListRepository();
+        OrdeByPageCrudRepository<Client> repo =  new ClientListRepository();
         repo.create(new Client("Jano", "Peres"));
         repo.create(new Client("Luisa", "Veltran"));
         repo.create(new Client("Andres", "Sandoval"));

@@ -2,33 +2,17 @@ package org.vlz.poointerfaces.model;
 
 import java.util.Objects;
 
-public class Client {
-    private Integer id;
+public class Client extends  BaseEntity{
     private String nombre;
     private String apellido;
-    private static int ultimoId;
-
-    public Client() {
-        this.id= ++ultimoId;
-    }
 
 
     public Client(String nombre, String apellido) {
-        this();
+        super();
         this.nombre = nombre;
         this.apellido = apellido;
     }
 
-
-
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getNombre() {
         return nombre;
@@ -53,12 +37,6 @@ public class Client {
                 ", apellido='" + apellido + '\'';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Client client = (Client) o;
-        return this.id.equals(client.id);
-    }
+
 
 }

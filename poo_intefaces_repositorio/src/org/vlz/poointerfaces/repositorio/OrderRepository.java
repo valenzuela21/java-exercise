@@ -4,8 +4,8 @@ import org.vlz.poointerfaces.model.Client;
 
 import java.util.List;
 
-public interface OrderRepository {
-    List<Client> listAll(String input, Direction dir);
+public interface OrderRepository<T> {
+    List<T> listAll(String input, Direction dir);
 
     default int order(String input, Client a, Client b) {
         int result = 0;

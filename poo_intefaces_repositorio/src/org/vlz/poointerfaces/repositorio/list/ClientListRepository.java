@@ -1,22 +1,13 @@
-package org.vlz.poointerfaces.repositorio;
+package org.vlz.poointerfaces.repositorio.list;
 
 import org.vlz.poointerfaces.model.Client;
+import org.vlz.poointerfaces.repositorio.AbstractListRepository;
+import org.vlz.poointerfaces.repositorio.Direction;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClientListRepository implements OrdeByPageCrudRepository{
-
-    private List<Client> dataSource;
-
-    public ClientListRepository() {
-        this.dataSource = new ArrayList<>();
-    }
-
-    @Override
-    public List<Client> listAll() {
-        return dataSource;
-    }
+public class ClientListRepository extends AbstractListRepository<Client> {
 
     @Override
     public Client byId(Integer id) {
@@ -30,10 +21,6 @@ public class ClientListRepository implements OrdeByPageCrudRepository{
         return result;
     }
 
-    @Override
-    public void create(Client client) {
-        this.dataSource.add(client);
-    }
 
     @Override
     public void edit(Client client) {
@@ -42,16 +29,6 @@ public class ClientListRepository implements OrdeByPageCrudRepository{
         c.setApellido(client.getApellido());
     }
 
-    @Override
-    public void delete(Integer id) {
-        this.dataSource.remove(this.byId(id));
-    }
-
-    @Override
-    public List<Client> listAll(int from, int until) {
-
-        return dataSource.subList(from, until);
-    }
 
     @Override
     public List<Client> listAll(String input, Direction dir) {
@@ -72,8 +49,4 @@ public class ClientListRepository implements OrdeByPageCrudRepository{
     }
 
 
-    @Override
-    public int total() {
-        return this.dataSource.size();
-    }
 }
