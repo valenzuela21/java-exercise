@@ -4,13 +4,14 @@ import org.vlz.poointerfaces.model.Client;
 import org.vlz.poointerfaces.model.Product;
 import org.vlz.poointerfaces.repositorio.AbstractListRepository;
 import org.vlz.poointerfaces.repositorio.Direction;
+import org.vlz.poointerfaces.repositorio.exceptions.ReadAccessDataException;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductListRepository extends AbstractListRepository<Product> {
     @Override
-    public void edit(Product product) {
+    public void edit(Product product) throws ReadAccessDataException {
         Product p = byId(product.getId());
         p.setDescription(product.getDescription());
         p.setPrecio(product.getPrecio());

@@ -4,6 +4,8 @@ import org.vlz.poointerfaces.model.Client;
 import org.vlz.poointerfaces.model.Product;
 import org.vlz.poointerfaces.repositorio.Direction;
 import org.vlz.poointerfaces.repositorio.OrdeByPageCrudRepository;
+import org.vlz.poointerfaces.repositorio.exceptions.AccesDataException;
+import org.vlz.poointerfaces.repositorio.exceptions.ReadAccessDataException;
 import org.vlz.poointerfaces.repositorio.list.ClientListRepository;
 import org.vlz.poointerfaces.repositorio.list.ProductListRepository;
 
@@ -11,6 +13,7 @@ import java.util.List;
 
 public class ExampleRepositoryProduct {
     public static void main(String[] args) {
+        try {
         OrdeByPageCrudRepository<Product> repo =  new ProductListRepository();
         repo.create(new Product("Mesa", 50.52));
         repo.create(new Product("Silla", 30.45));
@@ -49,6 +52,12 @@ public class ExampleRepositoryProduct {
 
         System.out.println("===== Total ====");
         System.out.println("Total Regsiter: " + repo.total());
-
+        }catch (ReadAccessDataException e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }catch (AccesDataException e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
     }
 }
