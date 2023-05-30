@@ -4,11 +4,12 @@ import org.david.example.model.Alumno;
 
 import java.util.*;
 
+import static java.util.Comparator.comparing;
+
 public class ExampleListComparableOrComparator {
     public static void main(String[] args) {
 
         List<Alumno> sa =  new ArrayList<>();
-
         sa.add(new Alumno("Patricia", 5));
         sa.add(new Alumno("Cata", 6));
         sa.add(new Alumno("Luci", 4));
@@ -19,8 +20,8 @@ public class ExampleListComparableOrComparator {
         sa.add(new Alumno("Lucas", 2));
 
         //Collections.sort(sa, (a, b) -> a.getNota().compareTo(b.getNota()));
-        sa.sort((a, b) -> a.getNota().compareTo(b.getNota()));
-
+        //sa.sort((a, b) -> a.getNota().compareTo(b.getNota()));
+        sa.sort(comparing(Alumno::getNota).reversed());
         System.out.println(sa);
 
         System.out.println("Iterando usando Stream foreach lambda");
