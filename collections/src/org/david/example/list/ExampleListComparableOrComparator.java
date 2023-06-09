@@ -1,4 +1,4 @@
-package org.david.example.set;
+package org.david.example.list;
 
 import org.david.example.model.Alumno;
 
