@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/poo_interfaces/poo_interfaces.iml" filepath="$PROJECT_DIR$/poo_interfaces/poo_interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/poo_sobrecargar/poo_sobrecargar.iml" filepath="$PROJECT_DIR$/poo_sobrecargar/poo_sobrecargar.iml" />
       <module fileurl="file://$PROJECT_DIR$/propiedades_sistema/propiedades_sistema.iml" filepath="$PROJECT_DIR$/propiedades_sistema/propiedades_sistema.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threads/threads.iml" filepath="$PROJECT_DIR$/threads/threads.iml" />
       <module fileurl="file://$PROJECT_DIR$/valores_references/valores_references.iml" filepath="$PROJECT_DIR$/valores_references/valores_references.iml" />
       <module fileurl="file://$PROJECT_DIR$/wrapper/wrapper.iml" filepath="$PROJECT_DIR$/wrapper/wrapper.iml" />
     </modules>
