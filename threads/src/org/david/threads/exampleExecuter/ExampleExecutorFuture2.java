@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 public class ExampleExecutorFuture2 {
     public static void main(String[] args) throws InterruptedException, ExecutionException, TimeoutException {
-        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
+        ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(3);
 
         System.out.println("Size Pool: " +  executor.getPoolSize());
         System.out.println("Count jobs of cola: " +  executor.getQueue().size());
