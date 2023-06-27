@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/collections/collections.iml" filepath="$PROJECT_DIR$/collections/collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/date/date.iml" filepath="$PROJECT_DIR$/date/date.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ejercicios_java.iml" filepath="$PROJECT_DIR$/.idea/ejercicios_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lambda/lambda.iml" filepath="$PROJECT_DIR$/lambda/lambda.iml" />
       <module fileurl="file://$PROJECT_DIR$/linea_commando/linea_commando.iml" filepath="$PROJECT_DIR$/linea_commando/linea_commando.iml" />
       <module fileurl="file://$PROJECT_DIR$/math/math.iml" filepath="$PROJECT_DIR$/math/math.iml" />
       <module fileurl="file://$PROJECT_DIR$/matrices/matrices.iml" filepath="$PROJECT_DIR$/matrices/matrices.iml" />
